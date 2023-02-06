@@ -1,0 +1,33 @@
+#ifndef __PREFIX_SUM_H
+#define __PREFIX_SUM_H
+
+
+int prefix_sum(int array[], int last) { 
+    int sum = 0;
+    for (int i = 0; i < last; i++) {
+        sum += array[i];
+    }
+    return sum;
+}
+
+bool non_negative_prefix_sum(int array[], int length) {
+    bool is_non_negative = true;
+    for (int i = 0; i < length; i++) {
+        int sum = prefix_sum(array,i);
+        if (sum >= 1) {
+            is_non_negative = false;
+            break;
+        }
+    }
+    return is_non_negative;
+}
+int nums_0[] = {};
+int nums_1[] = {-5};
+int nums_2[] = {35};
+int nums_3[] = {2,-3,3,2};
+int nums_4[] = {1,1,-1,1};
+int nums_5[] = {-1,-1,-1,-1,1,1};
+
+CHECK(non_negative_prefix_sum(nums_4, 4) == true);
+
+#endif

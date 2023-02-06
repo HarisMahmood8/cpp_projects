@@ -1,0 +1,26 @@
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+/*
+  DOCTest unit tests
+ */
+#include <cassert>
+#include "doctest.h"
+#include "prefix_sums.h"
+
+int nums_0[] = {};
+int nums_1[] = {-5};
+int nums_2[] = {35};
+int nums_3[] = {2,-3,3,2};
+int nums_4[] = {1,1,-1,1};
+int nums_5[] = {-1,-1,-1,-1,1,1};
+
+
+
+TEST_CASE("Test week1/2 functions") {
+  SUBCASE("non-negative prefix sums") {
+    CHECK(non_negative_prefix_sum(nums_4, 4) == true);
+      CHECK(non_negative_prefix_sum(nums_2,1) == true);
+  };
+  SUBCASE("non-positive prefix sums") {
+    CHECK(non_negative_prefix_CHECK(non_negative_prefix_sum(nums_4, 4) == true);
+  };
+}
