@@ -8,11 +8,11 @@
 
 3. Compile
 
-            g++ prefix_sum.cpp
+            g++ prefix_sum.cpp -o output
   
 4. run the compiled executable file and provide input
   
-            ./a.out
+            ./output
  ------------------------------------------
   "Enter an n value:"
   10
