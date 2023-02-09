@@ -1,9 +1,5 @@
 #include <iostream>
 #include "prefix_sum.h"
-#include <iostream>
-#include <algorithm>
-#include <random>
-#include <vector>
 
 
 using namespace std;
@@ -40,37 +36,42 @@ bool status_seq(vector<int> &spc) {
     }
     return true;
 }
-
-int main() {
-    int input_;
-    cout << "Enter an n value:";
-    cin >> input_;
-    int rf = 2*input_;
+int algrthm(int n)
+  {
+    int rf = 2*n;
     vector<int> spc(rf);
     int j;
-    for (j = 0; j < input_; j++) {
+    random_device gn;
+    for (j = 0; j < n; j++) {
         spc[j] = 1;
     }
     int k;
-    for (k = input_; k < rf; k++) {
+    for (k = n; k < rf; k++) {
         spc[k] = -1;
     }
 
-    random_device gn;
+    
     mt19937 g(gn());
     int num_ = 0;
-    int all_ = 0;
+    
     do {
         shuffle(spc.begin(), spc.end(), g);
-        all_++;
+    
         if (status_seq(spc)) {
             num_++;
         }
     } 
     
     while (next_permutation(spc.begin(), spc.end()));
-
-    cout << "Total = " << all_ << endl;
-    cout << "Correct = " << num_ << endl;
-    return 0;
+      cout << "Correct = " << num_ << endl;
+      return num_;
 }
+
+  
+int main() {
+    int input_;
+    cout << "Enter an n value:";
+    cin >> input_;
+    int z = algrthm(input_);
+    return z;
+  }
