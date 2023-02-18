@@ -12,8 +12,16 @@ struct node *linked_list_1 = build_linked_list(LIST_LENGTH_1);
 const int LIST_LENGTH_2 = 2;
 struct node *linked_list_2 = build_linked_list(LIST_LENGTH_2);
 
+
 const int LIST_LENGTH_10 = 10;
 struct node *linked_list_10 = build_linked_list(LIST_LENGTH_10);
+
+
+const int LIST_LENGTH_7 = 7;
+struct node *linked_list_7 = build_linked_list(LIST_LENGTH_7);
+
+const int LIST_LENGTH_8 = 8;
+struct node *linked_list_8 = build_linked_list(LIST_LENGTH_8);
 
 const int LIST_LENGTH_3 = 3;
 struct node *linked_list_3 = build_linked_list(LIST_LENGTH_3);
@@ -46,9 +54,15 @@ TEST_CASE("Testing build linked list") {
   print_linked_list(linked_list_1, LIST_LENGTH_1);
   print_linked_list(linked_list_2, LIST_LENGTH_2);
   print_linked_list(linked_list_10, LIST_LENGTH_10);
+  print_linked_list(linked_list_7, LIST_LENGTH_7);
+  print_linked_list(linked_list_8, LIST_LENGTH_8);
+  
+  
   
   CHECK(delete_linked_list(linked_list_0, LIST_LENGTH_0) == LIST_LENGTH_0);
   CHECK(delete_linked_list(linked_list_1, LIST_LENGTH_1) == LIST_LENGTH_1);
   CHECK(delete_linked_list(linked_list_2, LIST_LENGTH_2) == LIST_LENGTH_2);
   CHECK(delete_linked_list(linked_list_10, LIST_LENGTH_10) == LIST_LENGTH_10);
+  CHECK(delete_linked_list(linked_list_7, LIST_LENGTH_7) == LIST_LENGTH_7);
+  CHECK(delete_linked_list(linked_list_8, LIST_LENGTH_8) == LIST_LENGTH_8);
   }
