@@ -39,3 +39,16 @@ TEST_CASE("Testing pointer_jumped_linked_list") {
   
   }
 
+
+TEST_CASE("Testing build linked list") {
+  std::cout << "size of struct node: " << sizeof(node) << std::endl;
+  print_linked_list(linked_list_0, LIST_LENGTH_0);
+  print_linked_list(linked_list_1, LIST_LENGTH_1);
+  print_linked_list(linked_list_2, LIST_LENGTH_2);
+  print_linked_list(linked_list_10, LIST_LENGTH_10);
+  
+  CHECK(delete_linked_list(linked_list_0, LIST_LENGTH_0) == LIST_LENGTH_0);
+  CHECK(delete_linked_list(linked_list_1, LIST_LENGTH_1) == LIST_LENGTH_1);
+  CHECK(delete_linked_list(linked_list_2, LIST_LENGTH_2) == LIST_LENGTH_2);
+  CHECK(delete_linked_list(linked_list_10, LIST_LENGTH_10) == LIST_LENGTH_10);
+  }
