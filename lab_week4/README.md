@@ -1,6 +1,6 @@
 Clone the repository to your local machine
 
-       https://github.com/HarisMahmood8/3150_Projects.git
+      git clone https://github.com/HarisMahmood8/3150_Projects.git
        
 Change directory to lab_week4
 
