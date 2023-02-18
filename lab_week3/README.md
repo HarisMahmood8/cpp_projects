@@ -2,7 +2,7 @@
 
               https://github.com/HarisMahmood8/3150_Projects.git
 
-2. Change directory to classwork_week3
+2. Change directory to lab_week3
 
               cd 3150_Projects/lab_week3
 
