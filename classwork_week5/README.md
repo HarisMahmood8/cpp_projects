@@ -5,12 +5,12 @@ Clone the repository to your local machine
               
 Change directory to classwork_week5
 
-                 cd 3150_Projects/classwork_week5
+              cd 3150_Projects/classwork_week5
                  
 Compile
 
-                    g++ unit_testing.cpp student.cpp -o testing
+              g++ unit_testing.cpp student.cpp -o testing
 
 execute
 
-            ./testing
+              ./testing
