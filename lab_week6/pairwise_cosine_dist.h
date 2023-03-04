@@ -10,6 +10,7 @@
 #include <utility>
 #include <string>
 
+using namespace std;
 
 vector<vector<double>> accessing_file(string txt_file);
 
