@@ -1,5 +1,4 @@
 #include "pairwise_cosine_dist.h"
-using namespace std;
 
 double dist_cos(const vector<double>& first_, const vector<double>& second_) {
     double product_dot = 0.0, frst = 0.0, scnd = 0.0;
