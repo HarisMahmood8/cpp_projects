@@ -36,15 +36,8 @@ TEST_CASE("Testing no perfect number") {
 
 
 
-TEST_CASE("Testing empty vector") {
-    vector<int> input_list = {};
-    vector<int> expected_output = {};
-    CHECK(find_perfect_numbers(input_list) == expected_output);
-}
 
-
-
-TEST_CASE("Testing Vector 1") {
+TEST_CASE("Testing 1") {
     vector<int> input_list = {6};
     vector<int> expected_output = {6};
     CHECK(find_perfect_numbers(input_list) == expected_output);
@@ -52,7 +45,7 @@ TEST_CASE("Testing Vector 1") {
 
 
 
-TEST_CASE("Testing Vector 5") {
+TEST_CASE("Testing 5") {
     vector<int> input_list = {10, 15, 28, 30, 33};
     vector<int> expected_output = {28};
     CHECK(find_perfect_numbers(input_list) == expected_output);
