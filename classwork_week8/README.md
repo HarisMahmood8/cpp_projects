@@ -1,5 +1,3 @@
-The first line contains two integers, n and m, where n is the number of vertices and m is the number of edges.
-The next m lines each contain two integers, u and v, which represent an undirected edge between vertices u and v.
 
 Clone the repository to your local machine
 
