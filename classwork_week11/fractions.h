@@ -54,8 +54,8 @@ struct Matrices_division {
       vector<struct division> cur_rsl;
       for (int x = 0; x < mtrx[i].size(); x++) {
         division div;
-        for (int j = 0; j < sec.mtrx.size(); j++) {
-          div = div + (mtrx[i][x] * sec.mtrx[j][x]);
+        for (int e = 0; e < sec.mtrx.size(); e++) {
+          div = div + (mtrx[i][x] * sec.mtrx[e][x]);
         }
         cur_rsl.push_back(div);
       }
@@ -66,4 +66,3 @@ struct Matrices_division {
 };
 
 #endif
-
