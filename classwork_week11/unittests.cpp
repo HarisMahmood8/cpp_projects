@@ -5,24 +5,24 @@ using namespace std;
 
 
 TEST_CASE("Testing matrix") {
-  bigint num_big_int("600000000000000000000000000000000000000000000000000000000000000000");
-  bigint den_big_int("100000000000000000000000000000000000000000000000000000000000000000");
-  bigint div_big_int = num_big_int / den_big_int;
-  CHECK(div_big_int == to_bigint(6));
-  division frac_cur(num_big_int,den_big_int);
+  bigint numerator("600000000000000000000000000000000000000000000000000000000000000000");
+  bigint denominator("100000000000000000000000000000000000000000000000000000000000000000");
+  bigint answr = numerator / denominator;
+  CHECK(answr == to_bigint(6));
+  division frac_cur(numerator,denominator);
   frac_cur.outpt();
-  CHECK(frac_cur.cur.first == num_big_int);
-  CHECK(frac_cur.cur.second == den_big_int);
+  CHECK(frac_cur.cur.first == numerator);
+  CHECK(frac_cur.cur.second == denominator);
   division final_s = frac_cur * frac_cur;
-  CHECK(final_s.cur.first == (num_big_int * num_big_int));
-  CHECK(final_s.cur.second == (den_big_int * den_big_int));
+  CHECK(final_s.cur.first == (numerator * numerator));
+  CHECK(final_s.cur.second == (denominator * denominator));
 
   division adding = frac_cur + frac_cur;
 
   adding.outpt();
   
-  CHECK(adding.cur.first == (num_big_int + num_big_int));
-  CHECK(adding.cur.second == den_big_int);
+  CHECK(adding.cur.first == (numerator + numerator));
+  CHECK(adding.cur.second == denominator);
 
   division first(to_bigint(1),to_bigint(4));
   division second(to_bigint(2),to_bigint(3));
@@ -36,22 +36,22 @@ TEST_CASE("Testing matrix") {
 
 
 TEST_CASE("Testing matrix 2") {
-  bigint num_big_int("9876543210987654321098765432109876543210987654321098765432109876543210987654321098765432109876543210");
-  bigint den_big_int("123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789");
-  bigint div_big_int = num_big_int / den_big_int;
-  CHECK(div_big_int == to_bigint("80"));
-  division frac_cur(num_big_int, den_big_int);
+  bigint numerator("9876543210987654321098765432109876543210987654321098765432109876543210987654321098765432109876543210");
+  bigint denominator("123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789");
+  bigint answr = numerator / denominator;
+  CHECK(answr == to_bigint("80"));
+  division frac_cur(numerator, denominator);
   frac_cur.outpt();
-  CHECK(frac_cur.cur.first == num_big_int);
-  CHECK(frac_cur.cur.second == den_big_int);
+  CHECK(frac_cur.cur.first == numerator);
+  CHECK(frac_cur.cur.second == denominator);
   division final_s = frac_cur * frac_cur;
-  CHECK(final_s.cur.first == (num_big_int * num_big_int));
-  CHECK(final_s.cur.second == (den_big_int * den_big_int));
+  CHECK(final_s.cur.first == (numerator * numerator));
+  CHECK(final_s.cur.second == (denominator * denominator));
 
   division adding = frac_cur + frac_cur;
   adding.outpt();
-  CHECK(adding.cur.first == (num_big_int + num_big_int));
-  CHECK(adding.cur.second == den_big_int);
+  CHECK(adding.cur.first == (numerator + numerator));
+  CHECK(adding.cur.second == denominator);
 
   division first(to_bigint("9876543210987654321098765432109876543210987654321098765432109876543210987654321098765432109876543210"), to_bigint("123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789"));
   division second(to_bigint("555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555"), to_bigint("666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666"));
@@ -62,3 +62,7 @@ TEST_CASE("Testing matrix 2") {
                                                       {thrd,forth}};
   Matrices_division matrix_frst(fraction_div);
 }
+
+
+
+
